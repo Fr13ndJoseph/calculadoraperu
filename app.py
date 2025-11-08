@@ -122,12 +122,12 @@ st.caption("Proyecto educativo – no reemplaza orientación médica profesional
 
 col1, col2 = st.columns([1,1])
 with col1:
-    nombre = st.text_input("Nombres y Apellidos", "Edith Malqui")
+    nombre = st.text_input("Nombres y Apellidos")
     sexo = st.selectbox("Sexo", ["Femenino","Masculino"])
-    edad = st.number_input("Edad (años)", 10, 100, 28)
+    edad = st.number_input("Edad (años)")
 with col2:
-    peso = st.number_input("Peso (kg)", 30.0, 300.0, 85.0, step=0.1)
-    altura = st.number_input("Altura (m)", 1.2, 2.3, 1.55, step=0.01)
+    peso = st.number_input("Peso (kg)", step=0.1)
+    altura = st.number_input("Altura (m)", step=0.01)
 
 act = st.selectbox("Nivel de actividad", list(ACTIVIDADES.keys()), index=1)
 obj = st.selectbox("Objetivo", list(OBJETIVOS.keys()), index=0)
@@ -157,3 +157,4 @@ if st.button("Generar plan"):
         file_name=f"Plan_peru_{cat.replace(' ','_')}.pdf",
         mime="application/pdf"
     )
+
