@@ -1,5 +1,3 @@
-# Calculadora Nutricional Perú – con pantalla de bienvenida y nombre personalizado
-# Proyecto educativo – no reemplaza orientación médica profesional.
 
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -179,4 +177,5 @@ def mostrar_bienvenida():
     splash.mainloop()
 
 if __name__ == "__main__":
+
     mostrar_bienvenida()
